@@ -1,0 +1,171 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 2vh 10vw;
+    background-color: #FF9F66;
+}
+
+h1 {
+    color: #FFFAE6;
+    font-size: 5rem;
+    padding: 0;
+    margin: 2rem 0;
+    transition: all .1s ease-in-out;
+    text-shadow: 5px 5px #FF5F00;
+
+    &:hover {
+        text-shadow: 7px 7px #FF5F00;
+    }
+}
+
+input {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+
+    outline: none;
+    transition: all .2s ease-in-out;
+
+    color: white;
+    padding: .2rem .5rem;
+
+    width: fit-content;
+    margin: .2rem;
+    font-size: 1rem;
+
+    &::placeholder {
+        color: white;
+        transition: all .2s ease-in-out;
+    }
+
+    &:focus {
+        background-color: white;
+        color: #FF5F00;
+    }
+}
+
+button{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: .2rem;
+    transition: all .1s ease-in-out;
+
+    &:hover{
+        background-color: white;
+        color:#FF5F00;
+        scale: 1.2;
+    }
+
+    &:active{
+        scale: 1;
+    }
+}
+
+#header{
+    margin: 2rem 0 4rem 0;
+}
+
+.topSection {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.topSection>* {
+    margin: 0 0.5rem;
+}
+
+.dropdown {
+    color: white;
+    padding: .2rem .5rem;
+    border-bottom: 1px solid white;
+    width: 10vh;
+    transition: all .3s ease-in-out;
+    font-size: 1rem;
+}
+
+.isOpen {
+    border-bottom: none;
+    background-color: antiquewhite;
+    color: #FF5F00;
+}
+
+.item {
+    position: absolute;
+}
+
+.dropdown.option{
+    transition: all .2s ease-in-out;
+
+    &:hover{
+        background-color: antiquewhite;
+        color: #FF5F00;
+    }
+}
+
+
+.card{
+    background-color: rgba(250,235,215, 0.9);
+    box-shadow: 6px 6px #FF5F00;
+    
+    border-radius: .3rem;
+    padding: 1rem 2rem;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    height: fit-content;
+
+    transition: all .1s ease-in-out;
+
+    text-wrap: pretty;
+    word-break: break-word;
+
+    &:hover{
+        box-shadow: 10px 10px #FF5F00;
+    }
+
+}
+
+#card-name-date{
+    width: 90%;
+    
+    &>h2,&>p{
+        padding: 0 2rem 0 0;
+        margin: 1.2rem 0;
+    }
+    
+}
+
+#card-amount-delete{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &>button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #FF5F00;
+        width: 5vh;
+        border: 1px #FF5F00 solid;
+        transition: all 0.1s ease-in-out;
+    }
+
+    &>button:hover{
+        background-color: #FF5F00;
+        color: white;
+    }
+
+
+}

@@ -124,8 +124,8 @@ button{
     width: 90%;
     align-items: center;
     height: fit-content;
-
-    transition: all .1s ease-in-out;
+    
+    transition: all .2s ease-in-out !important;
 
     text-wrap: pretty;
     word-break: break-word;

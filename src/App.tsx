@@ -24,10 +24,26 @@ function App() {
 
     const [cards, setCards] = useState<CardInter[]>([]);
     const [currentAmount, setCurrentAmount] = useState<number>(0);
+    const [isInitialLoad, setIsInitialLoad] = useState(true);
 
     useEffect(() => {
-        showTotal();
-    }, [cards]);
+        const data = window.localStorage.getItem("Cards");
+        if (data !== null) {
+            const parsedData = JSON.parse(data);
+            setCards(parsedData);
+        }
+
+        setIsInitialLoad(false);
+        console.log(data, cards);
+    }, []);
+
+    useEffect(() => {
+        if (!isInitialLoad) {
+            showTotal();
+            window.localStorage.setItem("Cards", JSON.stringify(cards));
+            console.log("setting ", cards);
+        }
+    }, [cards, isInitialLoad]);
 
     function handleChange(e) {
         const { name, value } = e.target;
@@ -46,7 +62,6 @@ function App() {
                 return [...prevValues, input];
             });
         }
-        console.log(cards);
     }
 
     function deleteCard(id: number) {
